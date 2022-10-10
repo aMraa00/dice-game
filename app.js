@@ -32,8 +32,8 @@ function initGame(){
     document.getElementById("current-1").textContent = '0';
     
     // Тоглогчдын нэрийг буцааж гаргах.
-    document.getElementById("name-0").textContent = "Player 1";
-    document.getElementById("name-1").textContent = "Player 2";
+    document.getElementById("name-0").textContent = "Тоглогч-1";
+    document.getElementById("name-1").textContent = "Тоглогч-2";
 
     document.querySelector(".player-0-panel").classList.remove("winner");
     document.querySelector(".player-1-panel").classList.remove("winner");
@@ -70,7 +70,7 @@ function(){
         switchToNextPlayer();
     }
     }else{
-        alert("Тоглоом дууссан байна. New Game товчийг дарж шинээр эхлэнэ үү");
+        alert("Тоглоом дууссан байна. Шинээр тоглох товчийг дарж шинээр эхлэнэ үү");
     }
 });
 
@@ -88,7 +88,7 @@ document.querySelector(".btn-hold").addEventListener("click", function(){
          // Тоглоомыг дууссан төлөвт оруулна.
          isNewGame = false;
          //  ялагч гэсэн текстийг нэрнийх нь оронд гаргана
-         document.getElementById("name-" + activePlayer).textContent = "WINNER!!!";
+         document.getElementById("name-" + activePlayer).textContent = "ЯЛСАН!!!";
          document.querySelector(".player-" + activePlayer + "-panel").classList.add("winner");
          document.querySelector(".player-" + activePlayer + "-panel").classList.remove("active");
      }else{
@@ -97,7 +97,7 @@ document.querySelector(".btn-hold").addEventListener("click", function(){
      }
    }
    else{
-    alert("Тоглоом дууссан байна. New Game товчийг дарж шинээр эхлэнэ үү");
+    alert("Тоглоом дууссан байна. Шинээр тоглох товчийг дарж шинээр эхлэнэ үү");
 }
 });
 // энэ цункц нь тоглох ээлжийг дараачийн тоглогч руу шилжүүлнэ.
