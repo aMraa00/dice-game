@@ -10,6 +10,7 @@ var scores;
 var roundScore;
 // Шоо Зургийг үзүүлэх элемент элементийг DOM-оос хайж олоод энд хадгалъя
 var diceDom = document.querySelector(".dice");
+var ylahScore = prompt("Та ялах оноогоо оруулна уу?");
 
 // Тоглоомыг эхлүүлнэ.
 initGame();
@@ -84,7 +85,7 @@ document.querySelector(".btn-hold").addEventListener("click", function(){
      document.getElementById("score-" + activePlayer).textContent = scores[activePlayer];
  
      // уг тоглогч хожсон эсэхийг (оноо нь 100-ё их эсэх )шалгах.
-     if(scores[activePlayer] >= 10){
+     if(scores[activePlayer] >= ylahScore){
          // Тоглоомыг дууссан төлөвт оруулна.
          isNewGame = false;
          //  ялагч гэсэн текстийг нэрнийх нь оронд гаргана
